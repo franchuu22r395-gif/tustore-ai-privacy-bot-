@@ -11,6 +11,13 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
 
+bot.onText(/\/start/, async (msg) => {
+  await bot.sendMessage(
+    msg.chat.id,
+    "¡Hola! 🤖 Soy TUSTORE AI, tu asistente inteligente de TuStore Tech. ¿En qué puedo ayudarte?"
+  );
+});
+
 bot.on("message", async (msg) => {
   if (!msg.text || msg.text.startsWith("/")) return;
 
@@ -41,4 +48,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("Servidor TUSTORE AI iniciado.");
 });
-
