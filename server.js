@@ -6,7 +6,9 @@ const OpenAI = require("openai");
 const app = express();
 app.use(express.json());
 
-const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN);
+const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, {
+  polling: true
+});
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
