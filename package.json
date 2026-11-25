@@ -1,1 +1,16 @@
 
+{
+  "name": "tustore-ai-bot",
+  "version": "1.0.0",
+  "description": "Asistente inteligente de TuStore Tech",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "node-telegram-bot-api": "^0.66.0",
+    "openai": "^5.12.0"
+  }
+}
+
